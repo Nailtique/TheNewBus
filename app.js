@@ -193,5 +193,20 @@ let barChart = new Chart(ctx, {
 
 
 
+function getItems(){
 
+    let products;
+    products = localStorage.getItem('myArr');
+  
+    if(products){
+      Products.arrAll = JSON.parse(products);
+    }
+  }
+  
+  
+  
+  function storeArr(){
+    let keyItem = JSON.stringify(Products.arrAll);
+    localStorage.setItem('myArr',keyItem);
+  }
 
